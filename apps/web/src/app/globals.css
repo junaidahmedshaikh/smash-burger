@@ -1,0 +1,133 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #09090b;
+  --foreground: #faf6ef;
+  --brand-red: #e6392e;
+  --brand-yellow: #ffa700;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #09090b;
+  color: #faf6ef;
+  color-scheme: dark;
+}
+
+body {
+  font-family: var(--font-jakarta), -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background-color: #09090b;
+  color: #faf6ef;
+  overflow-x: hidden;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  selection-background-color: #e6392e;
+  selection-color: #ffffff;
+}
+
+::selection {
+  background-color: #e6392e;
+  color: #ffffff;
+}
+
+/* Custom Editorial Brutalist Typography Utilities */
+.font-display {
+  font-family: var(--font-syne), sans-serif;
+  text-transform: uppercase;
+  letter-spacing: -0.03em;
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px rgba(250, 246, 239, 0.35);
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.text-stroke:hover {
+  -webkit-text-stroke: 1px #e6392e;
+  color: #e6392e;
+}
+
+.text-stroke-red {
+  -webkit-text-stroke: 1.5px #e6392e;
+  color: transparent;
+}
+
+/* Smooth Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #27272a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #e6392e;
+}
+
+/* Texture Noise Overlay */
+.bg-noise {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Glassmorphism effects */
+.glass-panel {
+  background: rgba(19, 19, 22, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Kinetic Gradient Glow */
+.glow-red {
+  box-shadow: 0 0 40px -8px rgba(230, 57, 46, 0.4);
+}
+
+.glow-yellow {
+  box-shadow: 0 0 40px -8px rgba(255, 167, 0, 0.35);
+}
+
+/* Lenis Recommended CSS */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}

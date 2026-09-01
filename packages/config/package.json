@@ -1,0 +1,9 @@
+{
+  "name": "@smashd/config",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "build": "node -e \"console.log('@smashd/config ready')\""
+  }
+}
