@@ -5,7 +5,8 @@
   "main": "dist/server.js",
   "scripts": {
     "dev": "tsx watch src/server.ts",
-    "build": "tsc",
+    "build:deps": "npm run build --workspace=@smashd/types && npm run build --workspace=@smashd/validation",
+    "build": "npm run build:deps && tsc",
     "start": "node dist/server.js",
     "seed": "tsx src/scripts/seed.ts"
   },

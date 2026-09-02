@@ -44,9 +44,9 @@ export class OrderService {
       // Validate customizations and calculate price deltas
       if (itemInput.selectedCustomizations && itemInput.selectedCustomizations.length > 0) {
         for (const custom of itemInput.selectedCustomizations) {
-          const optionGroup = product.customizationOptions.find((g) => g.groupName === custom.groupName);
+          const optionGroup = product.customizationOptions.find((g: any) => g.groupName === custom.groupName);
           if (optionGroup) {
-            const choice = optionGroup.choices.find((c) => c.name === custom.choiceName);
+            const choice = optionGroup.choices.find((c: any) => c.name === custom.choiceName);
             const delta = choice ? choice.priceDelta : 0;
             verifiedCustomizations.push({
               groupName: custom.groupName,

@@ -116,7 +116,7 @@ export class AuthService {
     }
 
     if (addressData.isDefault) {
-      user.addresses.forEach((addr) => {
+      user.addresses.forEach((addr: IUserAddress) => {
         addr.isDefault = false;
       });
     } else if (user.addresses.length === 0) {

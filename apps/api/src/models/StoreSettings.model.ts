@@ -11,7 +11,7 @@ const StoreLocationSchema = new Schema<IStoreLocation>({
   isActive: { type: Boolean, default: true },
 });
 
-const StoreSettingsSchema = new Schema<IStoreSettingsDocument>(
+const StoreSettingsSchema = new Schema(
   {
     storeName: { type: String, default: 'Smash Burger' },
     tagline: { type: String, default: 'Unapologetic Flavor. Smashed Fresh.' },

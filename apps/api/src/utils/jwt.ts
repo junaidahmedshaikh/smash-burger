@@ -9,24 +9,24 @@ export interface JwtPayload {
   role: string;
 }
 
-export const generateAccessToken = (user: { _id: string | any; email: string; role: string }): string => {
+export const generateAccessToken = (user: { _id?: any; email?: string; role?: string } | any): string => {
   return jwt.sign(
     {
-      userId: user._id.toString(),
-      email: user.email,
-      role: user.role,
+      userId: user._id?.toString() || '',
+      email: user.email || '',
+      role: user.role || 'customer',
     },
     config.jwt.secret,
     { expiresIn: config.jwt.expiresIn as jwt.SignOptions['expiresIn'] }
   );
 };
 
-export const generateRefreshToken = (user: { _id: string | any; email: string; role: string }): string => {
+export const generateRefreshToken = (user: { _id?: any; email?: string; role?: string } | any): string => {
   return jwt.sign(
     {
-      userId: user._id.toString(),
-      email: user.email,
-      role: user.role,
+      userId: user._id?.toString() || '',
+      email: user.email || '',
+      role: user.role || 'customer',
     },
     config.jwt.refreshSecret,
     { expiresIn: config.jwt.refreshExpiresIn as jwt.SignOptions['expiresIn'] }
