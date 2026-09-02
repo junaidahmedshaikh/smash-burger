@@ -4,16 +4,18 @@
   "private": true,
   "description": "Production-ready premium burger e-commerce platform inspired by modern editorial food aesthetics",
   "workspaces": [
-    "apps/*",
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
   "scripts": {
     "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
     "dev:web": "npm run dev --workspace=@smashd/web",
     "dev:api": "npm run dev --workspace=@smashd/api",
-    "build": "npm run build --workspaces",
+    "build:packages": "npm run build --workspace=@smashd/types && npm run build --workspace=@smashd/validation",
+    "build": "npm run build:packages && npm run build:web",
     "build:web": "npm run build --workspace=@smashd/web",
-    "build:api": "npm run build --workspace=@smashd/api",
+    "build:api": "npm run build:packages && npm run build --workspace=@smashd/api",
+    "build:all": "npm run build:packages && npm run build:api && npm run build:web",
     "seed": "npm run seed --workspace=@smashd/api",
     "lint": "npm run lint --workspaces",
     "test": "npm run test --workspaces"
