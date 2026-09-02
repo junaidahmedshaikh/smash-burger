@@ -145,7 +145,7 @@ export default function CheckoutPage() {
           <span className="font-mono text-xs text-brand-yellow font-bold uppercase tracking-widest block mb-1">
             EXPRESS CHECKOUT
           </span>
-          <h1 className="font-display font-black text-4xl sm:text-6xl text-brand-cream uppercase tracking-tight">
+          <h1 className="font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-cream uppercase tracking-tight leading-tight">
             CONFIRM YOUR <span className="text-brand-red">ORDER</span>
           </h1>
         </div>

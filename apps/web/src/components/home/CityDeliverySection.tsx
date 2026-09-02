@@ -60,14 +60,14 @@ export default function CityDeliverySection() {
   const [selectedCity, setSelectedCity] = useState<CityCard>(CITIES[0]);
 
   return (
-    <section className="py-24 bg-brand-dark relative overflow-hidden border-t border-white/10">
+    <section className="py-14 sm:py-20 lg:py-24 bg-brand-dark relative overflow-hidden border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
           <div>
             <span className="font-mono text-xs text-brand-yellow font-bold uppercase tracking-widest block mb-2">
               DELIVERY & TAKEAWAY
             </span>
-            <h2 className="font-display font-black text-4xl sm:text-6xl text-brand-cream uppercase tracking-tight">
+            <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-cream uppercase tracking-tight leading-tight">
               QUALITY THAT <span className="text-brand-red">TRAVELS WITH YOU</span>
             </h2>
           </div>

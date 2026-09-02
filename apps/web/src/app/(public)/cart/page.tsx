@@ -78,7 +78,7 @@ export default function CartPage() {
         <div className="w-24 h-24 rounded-3xl bg-white/5 flex items-center justify-center mb-6 text-brand-cream/30">
           <ShoppingBag className="w-12 h-12" />
         </div>
-        <h1 className="font-display font-black text-4xl sm:text-5xl text-brand-cream mb-3">
+        <h1 className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-brand-cream mb-3">
           YOUR BAG IS EMPTY
         </h1>
         <p className="text-brand-cream/60 max-w-sm mb-8 text-sm sm:text-base">
@@ -97,7 +97,7 @@ export default function CartPage() {
   return (
     <div className="pt-28 pb-24 bg-brand-dark min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="font-display font-black text-4xl sm:text-6xl text-brand-cream uppercase tracking-tight mb-8">
+        <h1 className="font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-cream uppercase tracking-tight mb-6 sm:mb-8">
           YOUR <span className="text-brand-red">BAG</span> ({items.reduce((s, i) => s + i.quantity, 0)})
         </h1>
 

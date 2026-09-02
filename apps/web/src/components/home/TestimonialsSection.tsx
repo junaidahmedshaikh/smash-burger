@@ -35,13 +35,13 @@ const REVIEWS = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="py-24 bg-brand-dark-surface border-t border-white/10 relative overflow-hidden">
+    <section className="py-14 sm:py-20 lg:py-24 bg-brand-dark-surface border-t border-white/10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-12 sm:mb-16">
           <span className="font-mono text-xs text-brand-yellow font-bold uppercase tracking-widest block mb-2">
             COMMUNITY & CRAVINGS
           </span>
-          <h2 className="font-display font-black text-4xl sm:text-6xl text-brand-cream uppercase tracking-tight">
+          <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-cream uppercase tracking-tight">
             WHAT THE <span className="text-brand-red">CROWD SAYS</span>
           </h2>
         </div>

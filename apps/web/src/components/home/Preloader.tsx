@@ -43,7 +43,7 @@ export default function Preloader({ onComplete }: { onComplete?: () => void }) {
 
       {/* Center Kinetic Message */}
       <div className="flex flex-col items-center text-center">
-        <h2 className="font-display font-black text-4xl sm:text-6xl md:text-7xl tracking-tighter text-brand-cream mb-4">
+        <h2 className="font-display font-black text-2xl sm:text-4xl md:text-5xl tracking-tight text-brand-cream mb-3">
           SMASHING
           <br />
           <span className="text-stroke-red">THE STANDARD</span>

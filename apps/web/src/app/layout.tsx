@@ -49,10 +49,10 @@ export default function RootLayout({
       lang="en"
       className={`${syne.variable} ${jakarta.variable} ${jetbrainsMono.variable} dark`}
     >
-      <body className="bg-brand-dark text-brand-cream antialiased selection:bg-brand-red selection:text-white flex flex-col min-h-screen">
+      <body className="bg-brand-dark text-brand-cream antialiased selection:bg-brand-red selection:text-white flex flex-col min-h-screen overflow-x-hidden w-full">
         <Providers>
           <Navbar />
-          <main className="flex-1">{children}</main>
+          <main className="flex-1 w-full overflow-x-hidden">{children}</main>
           <Footer />
           <CartDrawer />
           <CustomizerModal />

@@ -229,7 +229,7 @@ export default function CustomizerPage() {
               <Flame className="w-3.5 h-3.5 fill-current" />
               <span>450°F BURGER LAB // CUSTOMIZER ENGINE</span>
             </div>
-            <h1 className="font-display font-black text-4xl sm:text-6xl text-brand-cream uppercase tracking-tight leading-none">
+            <h1 className="font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-cream uppercase tracking-tight leading-tight">
               ENGINEER YOUR <span className="text-brand-red">BURGER</span>
             </h1>
           </div>

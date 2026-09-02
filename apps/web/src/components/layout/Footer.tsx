@@ -171,7 +171,7 @@ export default function Footer() {
             {Array.from({ length: 4 }).map((_, i) => (
               <span
                 key={i}
-                className="font-display font-black text-6xl sm:text-8xl tracking-tighter text-white/5 mx-6 select-none"
+                className="font-display font-black text-3xl sm:text-5xl lg:text-6xl tracking-tight text-white/5 mx-4 sm:mx-6 select-none"
               >
                 UNAPOLOGETIC FLAVOR • 100% FRESH • SMASHED TO ORDER •
               </span>

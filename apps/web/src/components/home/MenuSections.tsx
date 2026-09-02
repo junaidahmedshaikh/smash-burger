@@ -539,7 +539,7 @@ export default function MenuSections({ products }: { products?: IProduct[] }) {
               <Flame className="w-3.5 h-3.5 fill-current" />
               <span>CRAFTED ON 450°F CAST IRON</span>
             </div>
-            <h2 className="font-display font-black text-4xl sm:text-6xl md:text-7xl text-brand-cream uppercase tracking-tight leading-none">
+            <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-cream uppercase tracking-tight leading-tight">
               EXPLORE OUR <span className="text-brand-red">MENU</span>
             </h2>
             <p className="text-sm sm:text-base text-brand-cream/70 font-body max-w-xl mt-3">

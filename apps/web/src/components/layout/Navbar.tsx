@@ -153,13 +153,13 @@ export default function Navbar() {
             </button>
           </div>
 
-          <div className="flex flex-col gap-6 flex-1 justify-center">
+          <div className="flex flex-col gap-5 flex-1 justify-center">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
                 onClick={closeMobileNav}
-                className="font-display font-black text-4xl text-brand-cream hover:text-brand-red transition-colors tracking-tight"
+                className="font-display font-black text-2xl sm:text-3xl text-brand-cream hover:text-brand-red transition-colors tracking-tight"
               >
                 {link.name}
               </Link>
@@ -168,7 +168,7 @@ export default function Navbar() {
               <Link
                 href="/admin"
                 onClick={closeMobileNav}
-                className="font-display font-bold text-2xl text-brand-yellow hover:text-brand-yellow-light transition-colors"
+                className="font-display font-bold text-lg sm:text-xl text-brand-yellow hover:text-brand-yellow-light transition-colors"
               >
                 ADMIN DASHBOARD
               </Link>
@@ -176,7 +176,7 @@ export default function Navbar() {
             <Link
               href={isAuthenticated ? "/account" : "/login"}
               onClick={closeMobileNav}
-              className="font-display font-bold text-2xl text-brand-cream/80 hover:text-brand-cream transition-colors"
+              className="font-display font-bold text-lg sm:text-xl text-brand-cream/80 hover:text-brand-cream transition-colors"
             >
               {isAuthenticated ? "MY PROFILE & ORDERS" : "SIGN IN / REGISTER"}
             </Link>

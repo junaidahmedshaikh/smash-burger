@@ -147,7 +147,7 @@ export default function OrderTrackingPage() {
                 <span>Refresh</span>
               </button>
             </div>
-            <h1 className="font-display font-black text-3xl sm:text-5xl text-brand-cream uppercase tracking-tight">
+            <h1 className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-brand-cream uppercase tracking-tight">
               {order.orderNumber}
             </h1>
           </div>

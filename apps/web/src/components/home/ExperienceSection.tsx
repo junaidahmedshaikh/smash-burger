@@ -27,13 +27,13 @@ const HIGHLIGHTS = [
 
 export default function ExperienceSection() {
   return (
-    <section className="py-24 bg-brand-dark-surface relative overflow-hidden border-t border-white/10">
+    <section className="py-14 sm:py-20 lg:py-24 bg-brand-dark-surface relative overflow-hidden border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-16">
+        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <span className="font-mono text-xs text-brand-yellow font-bold uppercase tracking-widest block mb-2">
             THE SMASH BURGER STANDARD
           </span>
-          <h2 className="font-display font-black text-4xl sm:text-6xl text-brand-cream uppercase tracking-tight">
+          <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-cream uppercase tracking-tight">
             FOOD THAT <span className="text-brand-red">FEELS GOOD</span>
           </h2>
         </div>

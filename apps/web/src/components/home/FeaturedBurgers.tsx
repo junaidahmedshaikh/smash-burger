@@ -26,9 +26,9 @@ export default function FeaturedBurgers({ products = [] }: { products?: IProduct
                 CHEF&apos;S MASTER SELECTION
               </span>
             </div>
-            <h2 className="font-display font-black text-4xl sm:text-6xl md:text-7xl text-brand-cream uppercase tracking-tight leading-none">
+            <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-cream uppercase tracking-tight leading-tight">
               TOP PICKS
-              <span className="block text-stroke-red text-3xl sm:text-5xl md:text-6xl mt-1">
+              <span className="block text-stroke-red text-lg sm:text-2xl md:text-3xl mt-1">
                 JUICY • CHEESY • FULLY LOADED
               </span>
             </h2>

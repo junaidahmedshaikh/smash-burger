@@ -43,12 +43,12 @@ export default function StorySection() {
               THE ART OF THE SMASH
             </div>
 
-            <h2 className="font-display font-black text-4xl sm:text-6xl text-brand-cream uppercase tracking-tight leading-tight">
+            <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-cream uppercase tracking-tight leading-tight">
               BORN ON THE FLAT TOP.
               <span className="block text-brand-yellow">PERFECTED FOR YOU.</span>
             </h2>
 
-            <p className="text-base text-brand-cream/70 font-body leading-relaxed">
+            <p className="text-sm sm:text-base text-brand-cream/70 font-body leading-relaxed">
               We started with a simple obsession: why do so many burgers hide behind thick, soggy,
               bland meat? We believe in the power of the high-heat smash — locking in juices while
               creating an intense, caramelized Maillard reaction crust.

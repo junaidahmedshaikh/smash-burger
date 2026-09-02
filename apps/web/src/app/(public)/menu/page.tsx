@@ -580,7 +580,7 @@ export default function MenuPage() {
           <span className="font-mono text-xs text-brand-yellow font-bold uppercase tracking-widest block mb-2">
             FRESH ON THE 450°F IRON GRILL
           </span>
-          <h1 className="font-display font-black text-5xl sm:text-4xl text-brand-cream uppercase tracking-tight leading-none mb-4">
+          <h1 className="font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-cream uppercase tracking-tight leading-tight mb-3 sm:mb-4">
             OUR GOURMET <span className="text-brand-red">MENU SECTIONS</span>
           </h1>
           <p className="text-sm sm:text-base text-brand-cream/70 font-body">

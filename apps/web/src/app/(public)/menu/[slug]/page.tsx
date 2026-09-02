@@ -124,16 +124,16 @@ export default function ProductDetailsPage() {
                 </div>
               </div>
 
-              <h1 className="font-display font-black text-4xl sm:text-5xl text-brand-cream uppercase tracking-tight leading-none mb-4">
+              <h1 className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-brand-cream uppercase tracking-tight leading-tight mb-3">
                 {product.name}
               </h1>
 
-              <span className="font-display font-black text-3xl sm:text-4xl text-brand-yellow block">
+              <span className="font-display font-black text-2xl sm:text-3xl text-brand-yellow block">
                 {formatPrice(product.price)}
               </span>
             </div>
 
-            <p className="text-base text-brand-cream/80 font-body leading-relaxed">
+            <p className="text-sm sm:text-base text-brand-cream/80 font-body leading-relaxed">
               {product.description}
             </p>
 

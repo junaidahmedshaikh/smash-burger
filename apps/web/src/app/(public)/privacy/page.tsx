@@ -4,7 +4,7 @@ export default function PrivacyPage() {
   return (
     <div className="pt-32 pb-24 bg-brand-dark min-h-screen">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 font-body text-brand-cream/80">
-        <h1 className="font-display font-black text-4xl sm:text-5xl text-brand-cream uppercase tracking-tight">
+        <h1 className="font-display font-black text-2xl sm:text-3xl md:text-4xl text-brand-cream uppercase tracking-tight">
           PRIVACY POLICY
         </h1>
         <p className="text-sm font-mono text-brand-yellow">Last Updated: September 2026</p>

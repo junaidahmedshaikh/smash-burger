@@ -189,11 +189,11 @@ export default function BlueprintBurgerHero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex items-center justify-start mb-6"
+          className="flex items-center justify-center lg:justify-start mb-4 sm:mb-6"
         >
-          <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-brand-dark-surface/90 border border-brand-yellow/30 backdrop-blur-xl shadow-surface-elevated">
-            <span className="w-2 h-2 rounded-full bg-brand-yellow animate-ping" />
-            <span className="font-mono text-xs text-brand-yellow font-bold uppercase tracking-widest">
+          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-brand-dark-surface/90 border border-brand-yellow/30 backdrop-blur-xl shadow-surface-elevated">
+            <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow animate-ping" />
+            <span className="font-mono text-[10px] sm:text-xs text-brand-yellow font-bold uppercase tracking-widest">
               SYSTEM 001 // 450°F SMASH PLATFORM
             </span>
           </div>
@@ -206,14 +206,14 @@ export default function BlueprintBurgerHero() {
           {/* ======================================================================= */}
           {/* LEFT COLUMN: EDITORIAL BRAND MESSAGE & CTAs */}
           {/* ======================================================================= */}
-          <div className="lg:col-span-5 flex flex-col justify-center text-left z-20">
-            {/* Massive Editorial Headline */}
+          <div className="lg:col-span-5 flex flex-col justify-center text-center lg:text-left items-center lg:items-start z-20">
+            {/* Balanced Editorial Headline */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9, delay: 0.1, ease: "easeOut" }}
             >
-              <h1 className="font-display font-black text-5xl sm:text-7xl md:text-8xl xl:text-[6.2rem] tracking-tight leading-[0.88] text-brand-cream uppercase select-none">
+              <h1 className="font-display font-black text-3xl sm:text-4xl md:text-5xl lg:text-[3.6rem] xl:text-[4.2rem] tracking-tight leading-[0.95] text-brand-cream uppercase select-none">
                 <span className="block text-brand-cream hover:text-brand-red transition-colors">
                   THE PERFECT
                 </span>
@@ -223,17 +223,17 @@ export default function BlueprintBurgerHero() {
               </h1>
             </motion.div>
 
-            {/* Subheadline: ENGINEERED AT 450°F (Bridging to Burger) */}
+            {/* Subheadline: ENGINEERED AT 450°F */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.9, delay: 0.25, ease: "easeOut" }}
-              className="mt-4 flex items-center gap-3 group cursor-default"
+              className="mt-3 sm:mt-4 flex items-center justify-center lg:justify-start gap-2.5 group cursor-default"
             >
-              <div className="w-8 h-[2px] bg-brand-yellow transition-all group-hover:w-12" />
-              <h2 className="font-mono font-bold text-lg sm:text-xl text-brand-yellow uppercase tracking-wider flex items-center gap-2">
+              <div className="w-6 sm:w-8 h-[2px] bg-brand-yellow transition-all group-hover:w-10" />
+              <h2 className="font-mono font-bold text-xs sm:text-sm md:text-base text-brand-yellow uppercase tracking-wider flex items-center gap-2">
                 <span>ENGINEERED AT 450°F.</span>
-                <ArrowRight className="w-4 h-4 text-brand-yellow/60 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 text-brand-yellow/60 group-hover:translate-x-1 transition-transform" />
               </h2>
             </motion.div>
 
@@ -242,7 +242,7 @@ export default function BlueprintBurgerHero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.9, delay: 0.4, ease: "easeOut" }}
-              className="mt-4 text-base sm:text-lg text-brand-cream/75 font-body max-w-md leading-relaxed"
+              className="mt-3 sm:mt-4 text-xs sm:text-sm md:text-base text-brand-cream/75 font-body max-w-md mx-auto lg:mx-0 leading-relaxed"
             >
               Every layer suspended in culinary precision. Golden toasted sesame
               brioche, crisp onion rings, vine-ripened tomatoes, molten cheddar
@@ -254,29 +254,29 @@ export default function BlueprintBurgerHero() {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
-              className="grid grid-cols-3 gap-3 my-6 pt-5 pb-5 border-y border-white/10"
+              className="grid grid-cols-3 gap-2 sm:gap-3 my-4 sm:my-6 py-3 sm:py-4 border-y border-white/10 w-full max-w-md"
             >
-              <div className="flex flex-col">
-                <span className="font-mono font-black text-2xl sm:text-3xl text-brand-cream">
+              <div className="flex flex-col items-center lg:items-start">
+                <span className="font-mono font-black text-xl sm:text-2xl lg:text-3xl text-brand-cream">
                   450°F
                 </span>
-                <span className="text-[10px] font-mono text-brand-yellow uppercase tracking-wider">
+                <span className="text-[9px] sm:text-[10px] font-mono text-brand-yellow uppercase tracking-wider">
                   SEAR TEMP
                 </span>
               </div>
-              <div className="flex flex-col border-x border-white/10 px-3">
-                <span className="font-mono font-black text-2xl sm:text-3xl text-brand-cream">
+              <div className="flex flex-col items-center lg:items-start border-x border-white/10 px-2 sm:px-3">
+                <span className="font-mono font-black text-xl sm:text-2xl lg:text-3xl text-brand-cream">
                   18-MO
                 </span>
-                <span className="text-[10px] font-mono text-emerald-400 uppercase tracking-wider">
+                <span className="text-[9px] sm:text-[10px] font-mono text-emerald-400 uppercase tracking-wider">
                   AGED CHEDDAR
                 </span>
               </div>
-              <div className="flex flex-col pl-2">
-                <span className="font-mono font-black text-2xl sm:text-3xl text-brand-cream">
+              <div className="flex flex-col items-center lg:items-start pl-1 sm:pl-2">
+                <span className="font-mono font-black text-xl sm:text-2xl lg:text-3xl text-brand-cream">
                   100%
                 </span>
-                <span className="text-[10px] font-mono text-brand-red uppercase tracking-wider">
+                <span className="text-[9px] sm:text-[10px] font-mono text-brand-red uppercase tracking-wider">
                   PRIME ANGUS
                 </span>
               </div>
@@ -287,19 +287,19 @@ export default function BlueprintBurgerHero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 pt-2"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center lg:justify-start gap-2.5 sm:gap-4 pt-1 w-full sm:w-auto"
             >
               <Link
                 href="/customizer"
-                className="w-full sm:w-auto flex-shrink-0 whitespace-nowrap flex items-center justify-center gap-2.5 px-6 sm:px-7 py-3.5 sm:py-4 rounded-full bg-brand-red hover:bg-brand-red-hover text-brand-cream font-display font-bold text-sm tracking-wider uppercase shadow-brand-glow transition-all active:scale-95 group"
+                className="w-full sm:w-auto flex items-center justify-center gap-2 px-5 sm:px-7 py-3 sm:py-3.5 rounded-full bg-brand-red hover:bg-brand-red-hover text-brand-cream font-display font-bold text-xs sm:text-sm tracking-wider uppercase shadow-brand-glow transition-all active:scale-95 group"
               >
                 <span className="whitespace-nowrap">BUILD YOUR BURGER</span>
-                <ArrowRight className="w-4 h-4 flex-shrink-0 group-hover:translate-x-1.5 transition-transform" />
+                <ArrowRight className="w-3.5 h-3.5 flex-shrink-0 group-hover:translate-x-1.5 transition-transform" />
               </Link>
 
               <Link
                 href="/menu"
-                className="w-full sm:w-auto flex-shrink-0 whitespace-nowrap flex items-center justify-center px-6 sm:px-7 py-3.5 sm:py-4 rounded-full bg-brand-dark-surface hover:bg-white/10 border border-white/15 text-brand-cream font-display font-bold text-sm tracking-wider uppercase transition-colors"
+                className="w-full sm:w-auto flex items-center justify-center px-5 sm:px-7 py-3 sm:py-3.5 rounded-full bg-brand-dark-surface hover:bg-white/10 border border-white/15 text-brand-cream font-display font-bold text-xs sm:text-sm tracking-wider uppercase transition-colors"
               >
                 <span className="whitespace-nowrap">EXPLORE THE MENU</span>
               </Link>
@@ -307,9 +307,9 @@ export default function BlueprintBurgerHero() {
           </div>
 
           {/* ======================================================================= */}
-          {/* RIGHT COLUMN: RIGHT-ALIGNED & TOP-SHIFTED BURGER COMPOSITION */}
+          {/* RIGHT COLUMN: DESKTOP-ONLY BURGER BLUEPRINT HUD COMPOSITION */}
           {/* ======================================================================= */}
-          <div className="lg:col-span-7 relative flex items-center justify-end min-h-[540px] sm:min-h-[620px] md:min-h-[680px] lg:min-h-[720px] pl-0 lg:pl-4">
+          <div className="hidden lg:flex lg:col-span-7 relative items-center justify-end min-h-[680px] lg:min-h-[720px] pl-0 lg:pl-4">
             {/* =================================================================== */}
             {/* UNIFIED VECTOR CONNECTOR SVG CANVAS (760x680 Desktop Precision HUD) */}
             {/* =================================================================== */}
@@ -512,28 +512,6 @@ export default function BlueprintBurgerHero() {
               })}
             </div>
           </div>
-        </div>
-
-        {/* ========================================================================= */}
-        {/* 5. MOBILE BLUEPRINT SPECIFICATION GRID (Clean Responsive View) */}
-        {/* ========================================================================= */}
-        <div className="lg:hidden mt-8 grid grid-cols-2 sm:grid-cols-3 gap-2.5">
-          {BLUEPRINT_SPECS.map((spec) => (
-            <div
-              key={`mob-${spec.id}`}
-              className="p-2.5 rounded-xl bg-brand-dark-surface/90 border border-white/15 backdrop-blur-md"
-            >
-              <span className="font-mono text-[8px] font-bold text-brand-yellow uppercase tracking-widest block mb-0.5">
-                {spec.code}
-              </span>
-              <h4 className="font-display font-black text-[11px] text-brand-cream uppercase leading-tight">
-                {spec.title}
-              </h4>
-              <p className="text-[9px] font-body text-brand-cream/60 mt-0.5 leading-tight">
-                {spec.subtitle}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
     </section>

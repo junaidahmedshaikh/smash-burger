@@ -90,11 +90,11 @@ export default function IngredientAssembly() {
             <Layers className="w-3.5 h-3.5" />
             <span>ANATOMY OF PERFECTION</span>
           </div>
-          <h2 className="font-display font-black text-4xl sm:text-6xl md:text-7xl text-brand-cream uppercase tracking-tight leading-none mb-4">
+          <h2 className="font-display font-black text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-brand-cream uppercase tracking-tight leading-tight mb-3">
             A STORY IN
             <span className="block text-brand-red">EVERY SINGLE BITE</span>
           </h2>
-          <p className="text-sm sm:text-base text-brand-cream/70 font-body">
+          <p className="text-xs sm:text-sm md:text-base text-brand-cream/70 font-body">
             Every layer is engineered with mathematical precision to achieve the holy grail of burger
             textures: soft, crunchy, juicy, and rich.
           </p>
@@ -110,9 +110,9 @@ export default function IngredientAssembly() {
                 <div
                   key={layer.id}
                   onClick={() => setActiveLayerIndex(index)}
-                  className={`cursor-pointer p-4 sm:p-5 rounded-2xl border transition-all duration-300 flex items-center justify-between group ${
+                  className={`cursor-pointer p-3 sm:p-5 rounded-2xl border transition-all duration-300 flex items-center justify-between group ${
                     isSelected
-                      ? 'bg-brand-dark-elevated border-brand-red translate-x-3 shadow-brand-glow'
+                      ? 'bg-brand-dark-elevated border-brand-red sm:translate-x-2 shadow-brand-glow'
                       : 'bg-brand-dark border-white/10 hover:border-white/20 hover:bg-white/5'
                   }`}
                 >
