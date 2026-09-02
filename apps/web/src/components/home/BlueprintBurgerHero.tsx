@@ -43,12 +43,12 @@ const BLUEPRINT_SPECS: BlueprintSpec[] = [
     title: "TOASTED BRIOCHE",
     subtitle: "Golden Sesame Crown • Charred Glaze",
     side: "left",
-    targetX: 410,
-    targetY: 105,
+    targetX: 386,
+    targetY: 100,
     cardAnchorX: 200,
     cardAnchorY: 50,
-    cardStyle: { left: "3%", top: "3%" },
-    pathD: "M 200 50 H 290 L 410 105",
+    cardStyle: { left: "2%", top: "4%" },
+    pathD: "M 200 50 H 280 L 386 100",
   },
   {
     id: "greens",
@@ -57,12 +57,12 @@ const BLUEPRINT_SPECS: BlueprintSpec[] = [
     title: "CRISP ONIONS & PICKLES",
     subtitle: "Fresh White Rings • Crinkle Dill Pickles",
     side: "right",
-    targetX: 510,
-    targetY: 175,
+    targetX: 486,
+    targetY: 165,
     cardAnchorX: 630,
-    cardAnchorY: 130,
+    cardAnchorY: 125,
     cardStyle: { right: "0%", top: "14%" },
-    pathD: "M 630 130 H 565 L 510 175",
+    pathD: "M 630 125 H 550 L 486 165",
   },
   {
     id: "cheese",
@@ -71,12 +71,12 @@ const BLUEPRINT_SPECS: BlueprintSpec[] = [
     title: "VINE TOMATO & CHEDDAR",
     subtitle: "Ruby Red Slices • Molten Cheddar Sheet",
     side: "left",
-    targetX: 335,
-    targetY: 285,
+    targetX: 311,
+    targetY: 265,
     cardAnchorX: 195,
-    cardAnchorY: 290,
+    cardAnchorY: 270,
     cardStyle: { left: "2%", top: "42%" },
-    pathD: "M 195 290 H 265 L 335 285",
+    pathD: "M 195 270 H 250 L 311 265",
   },
   {
     id: "patty",
@@ -85,12 +85,12 @@ const BLUEPRINT_SPECS: BlueprintSpec[] = [
     title: "FIRE-SEARED ANGUS",
     subtitle: "450°F Cast-Iron Sear • Coarse Sea Salt",
     side: "right",
-    targetX: 495,
-    targetY: 375,
+    targetX: 471,
+    targetY: 350,
     cardAnchorX: 635,
-    cardAnchorY: 330,
-    cardStyle: { right: "0%", top: "45%" },
-    pathD: "M 635 330 H 560 L 495 375",
+    cardAnchorY: 340,
+    cardStyle: { right: "0%", top: "48%" },
+    pathD: "M 635 340 H 545 L 471 350",
   },
   {
     id: "heel",
@@ -99,12 +99,12 @@ const BLUEPRINT_SPECS: BlueprintSpec[] = [
     title: "GREENS & SAUCED HEEL",
     subtitle: "Crisp Frilled Leaf • Toasted Heel Bun",
     side: "right",
-    targetX: 445,
-    targetY: 510,
+    targetX: 421,
+    targetY: 480,
     cardAnchorX: 630,
-    cardAnchorY: 520,
-    cardStyle: { right: "0%", top: "75%" },
-    pathD: "M 630 520 H 530 L 445 510",
+    cardAnchorY: 490,
+    cardStyle: { right: "0%", top: "78%" },
+    pathD: "M 630 490 H 515 L 421 480",
   },
 ];
 
@@ -145,7 +145,7 @@ export default function BlueprintBurgerHero() {
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className="relative min-h-[92vh] flex flex-col justify-center pt-28 pb-16 overflow-hidden bg-brand-dark select-none"
+      className="relative min-h-screen lg:h-screen flex flex-col justify-center pt-24 pb-12 overflow-hidden bg-brand-dark select-none"
     >
       {/* ========================================================================= */}
       {/* 1. FUTURISTIC ENGINEERING BLUEPRINT BACKGROUND MATRIX */}
@@ -155,7 +155,7 @@ export default function BlueprintBurgerHero() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:176px_176px] pointer-events-none" />
 
       {/* Atmospheric Warm Backlight Spotlight positioned behind the centered burger area */}
-      <div className="absolute top-1/2 right-8 sm:right-16 -translate-y-1/2 -mt-12 w-[550px] sm:w-[750px] h-[550px] sm:h-[750px] bg-gradient-to-tr from-brand-red/25 via-brand-yellow/15 to-transparent rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 right-8 sm:right-16 -translate-y-1/2 -mt-10 w-[520px] sm:w-[700px] h-[520px] sm:h-[700px] bg-gradient-to-tr from-brand-red/25 via-brand-yellow/15 to-transparent rounded-full blur-[130px] pointer-events-none" />
       <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-red/10 rounded-full blur-[130px] pointer-events-none" />
 
       {/* Background Architectural Metadata (Desktop) */}
@@ -189,7 +189,7 @@ export default function BlueprintBurgerHero() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-          className="flex items-center justify-center lg:justify-start mb-4 sm:mb-6"
+          className="relative top-16 items-center justify-center lg:justify-start mb-4 sm:mb-6"
         >
           <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-brand-dark-surface/90 border border-brand-yellow/30 backdrop-blur-xl shadow-surface-elevated">
             <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow animate-ping" />
@@ -309,12 +309,12 @@ export default function BlueprintBurgerHero() {
           {/* ======================================================================= */}
           {/* RIGHT COLUMN: DESKTOP-ONLY BURGER BLUEPRINT HUD COMPOSITION */}
           {/* ======================================================================= */}
-          <div className="hidden lg:flex lg:col-span-7 relative items-center justify-end min-h-[680px] lg:min-h-[720px] pl-0 lg:pl-4">
+          <div className="hidden lg:flex lg:col-span-7 relative items-center justify-end min-h-[640px] xl:min-h-[680px] pl-0 lg:pl-4">
             {/* =================================================================== */}
-            {/* UNIFIED VECTOR CONNECTOR SVG CANVAS (760x680 Desktop Precision HUD) */}
+            {/* UNIFIED VECTOR CONNECTOR SVG CANVAS (760x640 Desktop Precision HUD) */}
             {/* =================================================================== */}
             <svg
-              viewBox="0 0 760 680"
+              viewBox="0 0 760 640"
               className="hidden lg:block absolute inset-0 w-full h-full pointer-events-none z-15"
             >
               <defs>
@@ -358,7 +358,7 @@ export default function BlueprintBurgerHero() {
 
               {/* 450°F HUD Bridge Line connecting from the top widget to the Patty */}
               <path
-                d="M 630 35 L 575 180 L 495 375"
+                d="M 630 35 L 560 170 L 471 350"
                 fill="none"
                 stroke="#FFA700"
                 strokeWidth="1.5"
@@ -448,10 +448,10 @@ export default function BlueprintBurgerHero() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 1.1, ease: "easeOut" }}
-              className="relative w-[340px] sm:w-[460px] md:w-[530px] lg:w-[600px] xl:w-[640px] h-[400px] sm:h-[530px] md:h-[610px] lg:h-[680px] flex items-center justify-center will-change-transform z-10 lg:translate-x-0 lg:-translate-y-8"
+              className="relative w-[360px] sm:w-[460px] lg:w-[520px] xl:w-[580px] h-[400px] sm:h-[500px] lg:h-[560px] xl:h-[620px] flex items-center justify-center will-change-transform z-10 lg:-translate-x-6 xl:-translate-x-8 lg:-translate-y-4"
             >
               {/* Diffuse Ground Shadow */}
-              <div className="absolute -bottom-2 w-[300px] sm:w-[440px] md:w-[520px] h-[35px] rounded-full bg-black/95 blur-2xl pointer-events-none z-0" />
+              <div className="absolute -bottom-2 w-[300px] sm:w-[440px] md:w-[500px] h-[32px] rounded-full bg-black/95 blur-2xl pointer-events-none z-0" />
 
               {/* High-Resolution Cutout of the Provided Flying Burger Image */}
               <div className="relative w-full h-full filter drop-shadow-[0_30px_60px_rgba(0,0,0,0.9)] hover:scale-[1.01] transition-transform duration-500">
