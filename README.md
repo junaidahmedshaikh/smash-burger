@@ -1,237 +1,151 @@
 <div align="center">
 
-# 🍔 SMASH BURGER
-### *Unapologetic Flavor. Smashed Fresh at 450°F.*
+# Smash Burger
 
-[![Next.js 15](https://img.shields.io/badge/Next.js-15.1.7-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
-[![React 19](https://img.shields.io/badge/React-19.0.0-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)](https://react.dev/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.7.3-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4.17-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
-[![Framer Motion](https://img.shields.io/badge/Framer_Motion-12.4.3-black?style=for-the-badge&logo=framer&logoColor=blue)](https://www.framer.com/motion/)
-[![Express.js](https://img.shields.io/badge/Express.js-4.21.2-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-8.10.1-47A248?style=for-the-badge&logo=mongodb&logoColor=white)](https://www.mongodb.com/)
+**Production-grade gourmet burger e-commerce platform & interactive 450°F builder.**
 
-<br />
+[![Next.js](https://img.shields.io/badge/Next.js-15-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-black?style=flat-square&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.7-blue?style=flat-square&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![Express](https://img.shields.io/badge/Express-4.21-lightgrey?style=flat-square&logo=express)](https://expressjs.com/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-8-green?style=flat-square&logo=mongodb)](https://www.mongodb.com/)
 
-A production-grade, editorial gourmet burger e-commerce ecosystem inspired by the design precision of high-end culinary visualizers and the brutalist energy of street food culture.
-
-[Explore Features](#-signature-features) • [Quick Start](#-quick-start) • [Architecture](#-monorepo-architecture) • [Demo Accounts](#-demo-accounts--promo-codes) • [Deployment](#-production-deployment)
-
----
+[Live Demo](https://smash-burger-web.vercel.app) • [Architecture](#architecture) • [Getting Started](#getting-started) • [Deployment](#deployment)
 
 </div>
 
-<br />
+---
 
-## 🌟 The Experience
+## Overview
 
-Smash Burger is built around the culinary philosophy of the **Maillard Reaction** — searing freshly ground, 100% prime Angus chuck against a screaming **450°F cast-iron flat top** within 12 seconds to lock in caramelized savory crusts and molten cheddar richness.
-
-Every pixel, motion transition, and telemetry indicator on the frontend reflects this craft.
+Smash Burger is an end-to-end full-stack e-commerce application designed for artisanal food ordering. It features an interactive SVG blueprint visualizer, a real-time burger customization lab, persistent cart and coupon engine, live order tracking, and an administrative dispatch dashboard.
 
 ---
 
-## 🎯 Signature Features
+## Features
 
-### 📐 1. Precision Blueprint Radar Hero
-* **Live Vector Telemetry**: Dynamic SVG connector lines with animated photon pulses link technical specification cards directly to suspended burger layers (*Brioche Crown, Crisp Onions & Pickles, Vine Tomatoes, Fire-Seared Angus Patty, Greens & Heel*).
-* **3D Mouse Gyro Parallax**: Spring-physics parallax tracking tilts the high-resolution burger assembly in real-time response to desktop cursor movement.
-* **Interactive Layer Spotlight**: Hovering over any specification card triggers an animated gold radar ping that pinpoints the exact ingredient.
-
-### 🧪 2. 450°F Burger Lab Customizer (`/customizer`)
-* **Real-Time Telemetry Matrix**: Live monitors track sear temperature (450°F), projected calorie count, and dynamic pricing as you construct your burger.
-* **Granular Component Selection**:
-  * **Artisan Buns**: Toasted Sesame Brioche, Potato Roll, Black Garlic Charcoal, or Crisp Lettuce Wrap.
-  * **Smashed Angus Patties**: Single, Double, Triple, or Quadruple 450°F seared patties.
-  * **Molten Cheeses**: Sharp Wisconsin Cheddar, Smoked Gouda, Pepper Jack, or Blue Cheese Crumble.
-  * **Crunch & Pickles**: Crinkle-cut dill pickles, sweet white onion rings, charred jalapeños, crispy smoked bacon.
-  * **Scratch Sauces**: Smashed Secret Sauce, Smoked Truffle Mayo, Ghost Pepper Glaze.
-* **Celebration Engine**: Instant cart staging with full-screen confetti bursts upon burger finalization.
-
-### 📜 3. Editorial Gourmet Menu & Storefront (`/menu`)
-* **Category Filtering**: Seamless switching between Smashed Burgers, Crispy Buttermilk Chicken, Loaded Truffle Fries, Drinks & Handspun Shakes.
-* **Chef Spice Telemetry**: Visual indicator tags for spice levels from `0 (Sweet / None)` to `3 (Fiery Ghost Reaper)`.
-* **Instant Modifier Modal**: Tailor individual items with add-ons, patty counts, and special cooking instructions.
-
-### 🛒 4. Frictionless Cart & Smart Promo Engine
-* **Slide-Over Cart Drawer**: Real-time free delivery threshold progress bar (Free shipping unlocked at ₹499).
-* **Coupon Validation Engine**: Instant discount verification (`FIRSTBITE20` for 20% off, `SMASHD100` for flat ₹100 discount).
-* **Zero-Trust Server Pricing**: All calculations, tax subtotals (5% GST), and discount deductions are strictly verified on the backend.
-
-### 📍 5. Real-Time Live Order Tracker (`/orders/[id]`)
-* **Visual Stage Stepper**:
-  `Order Received` ➔ `Kitchen Prep` ➔ `450°F Cast-Iron Sear` ➔ `Quality Packed` ➔ `Out for Delivery` ➔ `Delivered`
-* **Real-Time Polling**: Automatic background status refreshing with estimated arrival timer and rider contact details.
-
-### ⚡ 6. Command Center Admin Dashboard (`/admin`)
-* **Executive Metrics**: Today's Gross Revenue, Total Order Volumes, Average Order Value (AOV), and Active Customers.
-* **7-Day Revenue Trends**: Interactive chart analytics for financial performance tracking.
-* **Live Kitchen Dispatch Line**: Kitchen managers can advance order statuses in real-time (`preparing` ➔ `cooking` ➔ `ready` ➔ `dispatched`).
-* **Menu Stock Switcher**: One-click toggles to mark products as featured or out of stock.
+- **Interactive Blueprint Hero**: Dynamic SVG vector telemetry HUD with 3D mouse parallax tracking.
+- **450°F Burger Lab (`/customizer`)**: Real-time layer-by-layer burger builder with live calorie, temperature, and price calculation.
+- **Gourmet Storefront (`/menu`)**: Category filtering, spice level indicators, and modifier selection.
+- **Cart & Promo Engine**: Slide-over drawer with free shipping progress bar and server-validated coupons (`FIRSTBITE20`, `SMASHD100`).
+- **Live Order Tracking (`/orders/[id]`)**: Stage stepper with auto-polling order status from kitchen sear to delivery.
+- **Admin Command Center (`/admin`)**: Financial telemetry, revenue charts, live kitchen dispatch, and menu inventory controls.
+- **Zero-Trust Security**: Server-enforced pricing, JWT authentication with HTTP-only cookies, and shared Zod validation.
 
 ---
 
-## 🏗️ Monorepo Architecture
+## Tech Stack
 
-The codebase is engineered as a clean, decoupled **NPM Workspaces monorepo**:
+| Layer | Technologies |
+| :--- | :--- |
+| **Frontend** | Next.js 15 (App Router), React 19, Tailwind CSS, Framer Motion, Lenis Scroll, Lucide Icons |
+| **Backend** | Node.js, Express.js, Mongoose (MongoDB), TypeScript, JWT, Helmet |
+| **Shared Packages** | `@smashd/types` (TypeScript interfaces), `@smashd/validation` (Zod schemas) |
+| **Tooling** | NPM Workspaces, Concurrently, TSX |
+
+---
+
+## Architecture
 
 ```text
 smash-burger/
 ├── apps/
-│   ├── web/                    # Next.js 15 App Router Frontend
-│   │   ├── src/
-│   │   │   ├── app/            # App Router (Home, Menu, Customizer, Checkout, Admin, Orders)
-│   │   │   ├── components/     # BlueprintBurgerHero, CartDrawer, Nav, UI Library
-│   │   │   ├── context/        # CartContext, AuthContext, ToastProvider
-│   │   │   └── lib/            # API client, animation helpers, currency formatters
-│   │   └── public/             # Optimized burger photography and vector assets
-│   │
-│   └── api/                    # Node.js + Express + Mongoose Backend
-│       ├── src/
-│       │   ├── controllers/    # Auth, Product, Order, Coupon, Analytics controllers
-│       │   ├── models/         # Mongoose schemas (User, Product, Order, Coupon, StoreSettings)
-│       │   ├── routes/         # Versioned REST endpoints (/api/v1/...)
-│       │   ├── services/       # Core business logic & database transactions
-│       │   └── scripts/        # Database seeders (seed.ts)
-│       └── tsconfig.json       # NodeNext strict TypeScript configuration
-│
+│   ├── web/               # Next.js 15 App Router frontend
+│   └── api/               # Express.js REST API
 ├── packages/
-│   ├── types/                  # Shared TypeScript Interfaces (@smashd/types)
-│   │   └── src/index.ts        # IUser, IProduct, IOrder, ICoupon, ICustomizationOption
-│   │
-│   └── validation/             # Shared Zod Validation Schemas (@smashd/validation)
-│       └── src/index.ts        # LoginSchema, CreateOrderSchema, ProductFilterSchema
-│
-├── package.json                # Root workspaces orchestration
-└── README.md
+│   ├── types/             # Shared TypeScript models & interfaces
+│   └── validation/        # Shared Zod validation schemas
+└── package.json           # Root workspace configuration
 ```
 
 ---
 
-## 🎨 Design System & Visual Identity
+## Getting Started
 
-| Token | Hex Code | Visual Application |
-| :--- | :--- | :--- |
-| **Obsidian** | `#09090B` | Deep background canvas and cinematic contrast |
-| **Dark Surface** | `#141417` | Elevated cards, navigation header, and interactive modals |
-| **Paprika Red** | `#E6392E` | Primary call-to-actions, brand accents, and active status states |
-| **Searing Gold** | `#FFA700` | 450°F temperature badges, telemetry pinpoints, and glowing highlights |
-| **Brioche Cream**| `#FFF8F0` | High-contrast editorial typography and hero headlines |
+### Prerequisites
 
-* **Typography**: Clean display font headers paired with high-legibility geometric body text.
-* **Smooth Physics**: Hardware-accelerated smooth scrolling powered by **Lenis** with silky UI choreographies by **Framer Motion**.
+- Node.js `20.x` or later
+- MongoDB instance (local or Atlas)
 
----
+### Installation
 
-## 🚀 Quick Start
-
-### 1. Prerequisites
-* **Node.js**: v20.x or higher
-* **NPM**: v10.x or higher
-* **MongoDB**: A running local instance (`mongodb://localhost:27017/smashd`) or a free [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) cluster URI.
-
-### 2. Clone and Install
 ```bash
+# Clone the repository
 git clone https://github.com/junaidahmedshaikh/smash-burger.git
 cd smash-burger
+
+# Install all dependencies
 npm install
+
+# Build shared workspace packages
+npm run build:packages
 ```
 
-### 3. Configure Environment Variables
+### Environment Configuration
 
-**Backend (`apps/api/.env`):**
+Create `.env` in `apps/api/`:
+
 ```env
 PORT=5000
 NODE_ENV=development
 MONGODB_URI=mongodb://localhost:27017/smashd
-JWT_SECRET=super_secret_smash_jwt_key_2026_dev
-JWT_REFRESH_SECRET=super_secret_smash_refresh_key_2026_dev
-JWT_EXPIRES_IN=15m
-JWT_REFRESH_EXPIRES_IN=7d
+JWT_SECRET=your_jwt_secret_key
+JWT_REFRESH_SECRET=your_refresh_secret_key
 CORS_ORIGIN=http://localhost:3000
 ```
 
-**Frontend (`apps/web/.env.local`):**
+Create `.env.local` in `apps/web/`:
+
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:5000/api/v1
 ```
 
-### 4. Seed Database
-Seed the database with gourmet burgers, sides, drinks, promo codes, and demo accounts:
-```bash
-npm run seed
-```
+### Seed & Run
 
-### 5. Launch Development
-Start both the frontend and backend concurrently with one command:
 ```bash
+# Seed initial menu, customizations, and demo accounts
+npm run seed
+
+# Start both frontend and backend concurrently
 npm run dev
 ```
 
-| Application | URL | Description |
+The applications will be accessible at:
+- **Frontend**: `http://localhost:3000`
+- **Admin Portal**: `http://localhost:3000/admin`
+- **Backend API**: `http://localhost:5000/api/v1`
+
+---
+
+## Demo Credentials
+
+| Role | Email | Password |
 | :--- | :--- | :--- |
-| **Storefront Web App** | `http://localhost:3000` | Full consumer storefront & 450°F Burger Lab |
-| **Admin Dashboard** | `http://localhost:3000/admin` | Live kitchen dispatch & analytics console |
-| **Backend REST API** | `http://localhost:5000/api/v1` | Express API endpoints |
-| **API Health Check** | `http://localhost:5000/api/v1/health`| Health and database connection monitor |
+| **Admin** | `admin@smashd.com` | `SmashdAdmin@2026` |
+| **Customer** | `customer@gmail.com` | `Customer@2026` |
+
+**Promo Codes**: `FIRSTBITE20` (20% off), `SMASHD100` (₹100 off).
 
 ---
 
-## 🔑 Demo Accounts & Promo Codes
+## Deployment
 
-### Pre-configured Login Accounts
-| Role | Email | Password | Access Level |
-| :--- | :--- | :--- | :--- |
-| **Admin / Manager** | `admin@smashd.com` | `SmashdAdmin@2026` | Full administrative control, kitchen dispatch, analytics |
-| **Customer** | `customer@gmail.com` | `Customer@2026` | Standard customer browsing, cart, checkout, tracking |
+### Vercel (Frontend)
 
-### Active Promo Codes
-* **`FIRSTBITE20`** — **20% OFF** entire order (minimum subtotal: ₹399).
-* **`SMASHD100`** — **₹100 FLAT DISCOUNT** (minimum subtotal: ₹499).
+1. Import the repository into Vercel.
+2. In **Project Settings** > **General**, set **Root Directory** to `apps/web`.
+3. Add `NEXT_PUBLIC_API_URL` to Environment Variables.
+4. Deploy.
 
----
+### Render / Railway (Backend API)
 
-## 📦 Production Deployment
-
-### 🌐 Frontend (Vercel)
-1. Import your repository into [Vercel](https://vercel.com).
-2. Set **Root Directory** to:
-   ```text
-   apps/web
-   ```
-3. Add Environment Variable:
-   ```env
-   NEXT_PUBLIC_API_URL=https://your-api-domain.com/api/v1
-   ```
-4. Click **Deploy**. Vercel will automatically build shared workspace packages and compile Next.js 15.
-
-### ⚙️ Backend API (Railway / Render / Fly.io / VPS)
-1. Deploy the backend from the root or `apps/api`.
-2. **Build Command**:
-   ```bash
-   npm run build:api
-   ```
-3. **Start Command**:
-   ```bash
-   npm run start --workspace=@smashd/api
-   ```
-4. Set production environment variables (`MONGODB_URI`, `JWT_SECRET`, `CORS_ORIGIN`).
+1. Deploy using repository root.
+2. **Build Command**: `npm run build:api`
+3. **Start Command**: `npm run start --workspace=@smashd/api`
 
 ---
 
-## 🛡️ Engineering & Security Standards
+## License
 
-* **Maillard Zero-Trust Pricing**: Client-side totals are treated purely as UI previews. All product base rates, customization deltas, coupon validity, and GST taxes are verified cryptographically and calculated server-side.
-* **Dual-Token Authentication**: Ephemeral 15-minute JWT access tokens paired with rotation-enabled HTTP-Only `SameSite` refresh cookies.
-* **Unified Strict Validation**: Zod schemas shared directly between client forms (`react-hook-form`) and Express route middleware.
-* **Defensive Middleware**: Comprehensive protection using `helmet`, rate limiting, and origin whitelisting.
-
----
-
-<div align="center">
-
-Crafted with dedication to culinary science and software craft.
-
-**Smash Burger © 2026** • *Smashed Hot. Built Fast.*
-
-</div>
+This project is licensed under the [MIT License](LICENSE).
