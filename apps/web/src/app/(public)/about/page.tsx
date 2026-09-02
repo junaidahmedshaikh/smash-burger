@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import Link from 'next/link';
-import { Flame, Award, ShieldCheck, ArrowRight, Heart } from 'lucide-react';
+import Image from "next/image";
+import Link from "next/link";
+import { Flame, Award, ShieldCheck, ArrowRight, Heart } from "lucide-react";
 
 export default function AboutPage() {
   return (
@@ -13,12 +13,13 @@ export default function AboutPage() {
           <span className="font-mono text-xs text-brand-yellow font-bold uppercase tracking-widest block mb-2">
             THE OBSESSION & THE CRAFT
           </span>
-          <h1 className="font-display font-black text-5xl sm:text-7xl text-brand-cream uppercase tracking-tight leading-none mb-6">
+          <h1 className="font-display font-black text-5xl sm:text-4xl text-brand-cream uppercase tracking-tight leading-none mb-6">
             BORN FROM <span className="text-brand-red">HEAT & IRON</span>
           </h1>
           <p className="text-base sm:text-lg text-brand-cream/70 font-body leading-relaxed">
-            We didn&apos;t set out to make just another burger. We set out to eliminate the fluffy,
-            bland mediocrity of fast food and replace it with explosive culinary intensity.
+            We didn&apos;t set out to make just another burger. We set out to
+            eliminate the fluffy, bland mediocrity of fast food and replace it
+            with explosive culinary intensity.
           </p>
         </div>
 
@@ -29,13 +30,16 @@ export default function AboutPage() {
               WHY WE SMASH
             </h2>
             <p className="text-sm sm:text-base text-brand-cream/80 font-body leading-relaxed">
-              When fresh Angus beef meets a screaming hot 450°F cast iron flat-top and gets pressed with
-              immense force, something magical occurs: the Maillard reaction. Sugars and amino acids
-              fuse into an ultra-crispy, deeply caramelized lace crust that locks all juices inside the patty.
+              When fresh Angus beef meets a screaming hot 450°F cast iron
+              flat-top and gets pressed with immense force, something magical
+              occurs: the Maillard reaction. Sugars and amino acids fuse into an
+              ultra-crispy, deeply caramelized lace crust that locks all juices
+              inside the patty.
             </p>
             <p className="text-sm sm:text-base text-brand-cream/80 font-body leading-relaxed">
-              Thick pub burgers lose their crust and get chewy. Our double smashed patties maximize surface
-              area contact, delivering maximum savory umami in every bite.
+              Thick pub burgers lose their crust and get chewy. Our double
+              smashed patties maximize surface area contact, delivering maximum
+              savory umami in every bite.
             </p>
           </div>
 
@@ -59,8 +63,9 @@ export default function AboutPage() {
               1. 100% FRESH ANGUS
             </h3>
             <p className="text-sm text-brand-cream/70 font-body leading-relaxed">
-              Ground fresh daily from an 80/20 blend of chuck, brisket, and short-rib. Never frozen, no
-              fillers, seasoned only with sea salt and cracked black pepper.
+              Ground fresh daily from an 80/20 blend of chuck, brisket, and
+              short-rib. Never frozen, no fillers, seasoned only with sea salt
+              and cracked black pepper.
             </p>
           </div>
 
@@ -72,8 +77,9 @@ export default function AboutPage() {
               2. MILK BRIOCHE
             </h3>
             <p className="text-sm text-brand-cream/70 font-body leading-relaxed">
-              Custom-baked Hokkaido style buns that hold structural integrity without overpowering the beef.
-              Toasted on flat-top with clarified French butter.
+              Custom-baked Hokkaido style buns that hold structural integrity
+              without overpowering the beef. Toasted on flat-top with clarified
+              French butter.
             </p>
           </div>
 
@@ -85,8 +91,9 @@ export default function AboutPage() {
               3. SCRATCH SAUCES
             </h3>
             <p className="text-sm text-brand-cream/70 font-body leading-relaxed">
-              From our 14-ingredient Umami Smash sauce to roasted black truffle aioli, every dip and drizzle
-              is formulated in our test kitchen and made from scratch.
+              From our 14-ingredient Umami Smash sauce to roasted black truffle
+              aioli, every dip and drizzle is formulated in our test kitchen and
+              made from scratch.
             </p>
           </div>
         </div>
@@ -97,11 +104,12 @@ export default function AboutPage() {
             READY TO TASTE THE DIFFERENCE?
           </h2>
           <p className="text-sm sm:text-base text-brand-cream/90 max-w-xl mx-auto mb-8 font-body">
-            Experience what real craftsmanship tastes like. Smashed hot to order.
+            Experience what real craftsmanship tastes like. Smashed hot to
+            order.
           </p>
           <Link
             href="/menu"
-            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-brand-cream text-brand-dark font-display font-black text-sm uppercase tracking-wider hover:bg-white transition-all shadow-xl"
+            className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-brand-cream text-brand-dark font-display font-bold text-sm uppercase tracking-wider hover:bg-white transition-all shadow-xl"
           >
             <span>EXPLORE THE MENU</span>
             <ArrowRight className="w-4 h-4" />

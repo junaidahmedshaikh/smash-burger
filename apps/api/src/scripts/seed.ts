@@ -588,7 +588,7 @@ export const seedDatabase = async () => {
 
     console.log('🌱 Seeding Store Settings...');
     await StoreSettings.create({
-      storeName: "SMASH'D Craft Burger Co.",
+      storeName: 'Smash Burger',
       tagline: 'Unapologetic Flavor. Smashed Fresh.',
       deliveryFee: 49,
       freeDeliveryThreshold: 499,

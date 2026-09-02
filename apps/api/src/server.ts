@@ -11,9 +11,9 @@ const startServer = async () => {
     const server = app.listen(config.port, () => {
       console.log(`
   🍔 ==========================================
-  🚀 SMASH'D Craft Burger Co. API Live!
-  📡 Port: ${config.port}
-  🌐 Environment: ${config.env}
+  🚀 Smash Burger API Live!
+  📡 Endpoint: http://localhost:${config.port}/api/v1
+  🔥 Mode: ${config.env}
   ⚡ Health Check: http://localhost:${config.port}/api/v1/health
   ==========================================
       `);

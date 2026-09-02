@@ -1,4 +1,4 @@
-# 🍔 SMASH'D Craft Burger Co. — Premium E-Commerce Platform
+# 🍔 Smash Burger — Premium E-Commerce Platform
 
 A production-ready, ultra-premium gourmet burger e-commerce platform inspired by the visual ambition, storytelling, motion design, and interaction quality of **CRAV Burgers**.
 

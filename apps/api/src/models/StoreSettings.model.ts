@@ -13,7 +13,7 @@ const StoreLocationSchema = new Schema<IStoreLocation>({
 
 const StoreSettingsSchema = new Schema<IStoreSettingsDocument>(
   {
-    storeName: { type: String, default: "SMASH'D Craft Burger Co." },
+    storeName: { type: String, default: 'Smash Burger' },
     tagline: { type: String, default: 'Unapologetic Flavor. Smashed Fresh.' },
     deliveryFee: { type: Number, default: 49 },
     freeDeliveryThreshold: { type: Number, default: 499 },

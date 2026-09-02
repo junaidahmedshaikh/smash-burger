@@ -59,7 +59,7 @@ export const createApp = (): Express => {
   // Root Welcome Endpoint
   app.get('/', (req: Request, res: Response) => {
     res.status(200).json({
-      name: "SMASH'D Craft Burger Co. API",
+      name: 'Smash Burger API',
       version: '1.0.0',
       docs: '/api/v1/health',
     });

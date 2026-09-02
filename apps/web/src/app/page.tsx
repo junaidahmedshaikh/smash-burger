@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Preloader from '@/components/home/Preloader';
 import Hero from '@/components/home/Hero';
 import MarqueeStrip from '@/components/home/MarqueeStrip';
-import FeaturedBurgers from '@/components/home/FeaturedBurgers';
+import MenuSections from '@/components/home/MenuSections';
 import IngredientAssembly from '@/components/home/IngredientAssembly';
 import StorySection from '@/components/home/StorySection';
 import ExperienceSection from '@/components/home/ExperienceSection';
@@ -164,7 +164,7 @@ export default function HomePage() {
       <Preloader />
       <Hero />
       <MarqueeStrip />
-      <FeaturedBurgers products={featuredProducts} />
+      <MenuSections products={featuredProducts} />
       <IngredientAssembly />
       <StorySection />
       <ExperienceSection />

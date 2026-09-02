@@ -1,53 +1,53 @@
-'use client';
+"use client";
 
-export const dynamic = 'force-dynamic';
+export const dynamic = "force-dynamic";
 
-import { MapPin, Phone, Mail, Clock, MessageSquare, Send } from 'lucide-react';
-import { useState } from 'react';
+import { MapPin, Phone, Mail, Clock, MessageSquare, Send } from "lucide-react";
+import { useState } from "react";
 
 const LOCATIONS = [
   {
-    city: 'Mumbai',
-    area: 'Bandra West (Flagship)',
-    address: 'Linking Road, Bandra West, Mumbai, MH 400050',
-    phone: '+91 98200 12345',
-    hours: '11:00 AM – 02:00 AM (Daily)',
+    city: "Mumbai",
+    area: "Bandra West (Flagship)",
+    address: "Linking Road, Bandra West, Mumbai, MH 400050",
+    phone: "+91 98200 12345",
+    hours: "11:00 AM – 02:00 AM (Daily)",
   },
   {
-    city: 'Bengaluru',
-    area: 'Indiranagar',
-    address: '100ft Road, Indiranagar, Bengaluru, KA 560038',
-    phone: '+91 98450 67890',
-    hours: '11:00 AM – 01:00 AM (Daily)',
+    city: "Bengaluru",
+    area: "Indiranagar",
+    address: "100ft Road, Indiranagar, Bengaluru, KA 560038",
+    phone: "+91 98450 67890",
+    hours: "11:00 AM – 01:00 AM (Daily)",
   },
   {
-    city: 'Delhi NCR',
-    area: 'Gurugram CyberHub',
-    address: 'CyberHub, DLF Phase 2, Gurugram, HR 122002',
-    phone: '+91 98110 54321',
-    hours: '11:00 AM – 03:00 AM (Daily)',
+    city: "Delhi NCR",
+    area: "Gurugram CyberHub",
+    address: "CyberHub, DLF Phase 2, Gurugram, HR 122002",
+    phone: "+91 98110 54321",
+    hours: "11:00 AM – 03:00 AM (Daily)",
   },
   {
-    city: 'Hyderabad',
-    area: 'Jubilee Hills',
-    address: 'Road No. 36, Jubilee Hills, Hyderabad, TS 500033',
-    phone: '+91 98660 98765',
-    hours: '12:00 PM – 01:30 AM (Daily)',
+    city: "Hyderabad",
+    area: "Jubilee Hills",
+    address: "Road No. 36, Jubilee Hills, Hyderabad, TS 500033",
+    phone: "+91 98660 98765",
+    hours: "12:00 PM – 01:30 AM (Daily)",
   },
   {
-    city: 'Pune',
-    area: 'Koregaon Park',
-    address: 'North Main Road, Koregaon Park, Pune, MH 411001',
-    phone: '+91 98230 45678',
-    hours: '12:00 PM – 01:00 AM (Daily)',
+    city: "Pune",
+    area: "Koregaon Park",
+    address: "North Main Road, Koregaon Park, Pune, MH 411001",
+    phone: "+91 98230 45678",
+    hours: "12:00 PM – 01:00 AM (Daily)",
   },
 ];
 
 export default function ContactPage() {
   const [submitted, setSubmitted] = useState(false);
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,11 +63,12 @@ export default function ContactPage() {
           <span className="font-mono text-xs text-brand-yellow font-bold uppercase tracking-widest block mb-2">
             REACH THE TEST KITCHEN
           </span>
-          <h1 className="font-display font-black text-5xl sm:text-7xl text-brand-cream uppercase tracking-tight leading-none mb-4">
+          <h1 className="font-display font-black text-5xl sm:text-4xl text-brand-cream uppercase tracking-tight leading-none mb-4">
             LOCATIONS & <span className="text-brand-red">CONTACT</span>
           </h1>
           <p className="text-sm sm:text-base text-brand-cream/70 font-body">
-            Have questions regarding catering, secret pop-ups, or delivery zones? Reach out anytime.
+            Have questions regarding catering, secret pop-ups, or delivery
+            zones? Reach out anytime.
           </p>
         </div>
 
@@ -123,7 +124,9 @@ export default function ContactPage() {
             {submitted ? (
               <div className="p-6 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-center space-y-2 font-mono">
                 <p className="font-bold text-sm">Message Transmitted!</p>
-                <p className="text-xs text-emerald-300">We will respond within 2 hours.</p>
+                <p className="text-xs text-emerald-300">
+                  We will respond within 2 hours.
+                </p>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4">
