@@ -183,30 +183,28 @@ export default function BlueprintBurgerHero() {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         {/* ========================================================================= */}
-        {/* 2. TOP ANNOUNCEMENT BADGE */}
-        {/* ========================================================================= */}
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          className="relative top-16 items-center justify-center lg:justify-start mb-4 sm:mb-6"
-        >
-          <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-brand-dark-surface/90 border border-brand-yellow/30 backdrop-blur-xl shadow-surface-elevated">
-            <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow animate-ping" />
-            <span className="font-mono text-[10px] sm:text-xs text-brand-yellow font-bold uppercase tracking-widest">
-              SYSTEM 001 // 450°F SMASH PLATFORM
-            </span>
-          </div>
-        </motion.div>
-
-        {/* ========================================================================= */}
-        {/* 3. MAIN HERO COMPOSITION (LEFT COPY + RIGHT-ALIGNED BURGER BLUEPRINT) */}
+        {/* MAIN HERO COMPOSITION (LEFT COPY + RIGHT-ALIGNED BURGER BLUEPRINT) */}
         {/* ========================================================================= */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-4 items-center">
           {/* ======================================================================= */}
           {/* LEFT COLUMN: EDITORIAL BRAND MESSAGE & CTAs */}
           {/* ======================================================================= */}
           <div className="lg:col-span-5 flex flex-col justify-center text-center lg:text-left items-center lg:items-start z-20">
+            {/* Top Announcement Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: -20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="flex items-center justify-center lg:justify-start mb-4 sm:mb-5"
+            >
+              <div className="inline-flex items-center gap-2 px-3 sm:px-4 py-1 sm:py-1.5 rounded-full bg-brand-dark-surface/90 border border-brand-yellow/30 backdrop-blur-xl shadow-surface-elevated">
+                <span className="w-1.5 h-1.5 rounded-full bg-brand-yellow animate-ping" />
+                <span className="font-mono text-[10px] sm:text-xs text-brand-yellow font-bold uppercase tracking-widest">
+                  SYSTEM 001 // 450°F SMASH PLATFORM
+                </span>
+              </div>
+            </motion.div>
+
             {/* Balanced Editorial Headline */}
             <motion.div
               initial={{ opacity: 0, x: -30 }}

@@ -1,12 +1,21 @@
 import { Review, IReviewDocument } from '../models/Review.model.js';
 import { Product } from '../models/Product.model.js';
+import { FALLBACK_ID_TO_SLUG } from './product.service.js';
 import { AppError } from '../utils/response.js';
 import { IReview } from '@smashd/types';
 import { CreateReviewInput } from '@smashd/validation';
 
 export class ReviewService {
   static async getProductReviews(productId: string): Promise<IReview[]> {
-    const reviews = await Review.find({ product: productId, isApproved: true })
+    const isMongoId = /^[0-9a-fA-F]{24}$/.test(productId);
+    let targetProductId = productId;
+    if (!isMongoId) {
+      const slug = FALLBACK_ID_TO_SLUG[productId] || productId.toLowerCase();
+      const p = await Product.findOne({ slug });
+      if (p) targetProductId = p._id.toString();
+    }
+
+    const reviews = await Review.find({ product: targetProductId, isApproved: true })
       .populate('user', 'name avatarUrl')
       .sort({ createdAt: -1 });
 
@@ -14,14 +23,23 @@ export class ReviewService {
   }
 
   static async createReview(userId: string, input: CreateReviewInput): Promise<IReview> {
-    const product = await Product.findById(input.productId);
+    const isMongoId = /^[0-9a-fA-F]{24}$/.test(input.productId);
+    let product = null;
+
+    if (isMongoId) {
+      product = await Product.findById(input.productId);
+    } else {
+      const slug = FALLBACK_ID_TO_SLUG[input.productId] || input.productId.toLowerCase();
+      product = await Product.findOne({ slug });
+    }
+
     if (!product) {
       throw new AppError('Product not found', 404, 'PRODUCT_NOT_FOUND');
     }
 
     const review = await Review.create({
       user: userId,
-      product: input.productId,
+      product: product._id,
       rating: input.rating,
       comment: input.comment,
       isApproved: true,

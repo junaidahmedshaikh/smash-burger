@@ -1,6 +1,7 @@
 import { Order, IOrderDocument } from '../models/Order.model.js';
 import { Product } from '../models/Product.model.js';
 import { CouponService } from './coupon.service.js';
+import { FALLBACK_ID_TO_SLUG } from './product.service.js';
 import { AppError } from '../utils/response.js';
 import { config } from '../config/index.js';
 import { IOrder, IOrderItem, ISelectedCustomization, OrderStatus, PaymentStatus } from '@smashd/types';
@@ -29,7 +30,16 @@ export class OrderService {
     const validatedItems: IOrderItem[] = [];
 
     for (const itemInput of input.items) {
-      const product = await Product.findById(itemInput.productId);
+      const isMongoId = /^[0-9a-fA-F]{24}$/.test(itemInput.productId);
+      let product = null;
+
+      if (isMongoId) {
+        product = await Product.findById(itemInput.productId);
+      } else {
+        const slug = FALLBACK_ID_TO_SLUG[itemInput.productId] || itemInput.productId.toLowerCase();
+        product = await Product.findOne({ slug });
+      }
+
       if (!product) {
         throw new AppError(`Product with ID '${itemInput.productId}' not found`, 404, 'PRODUCT_NOT_FOUND');
       }

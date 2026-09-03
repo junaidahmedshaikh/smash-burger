@@ -18,12 +18,14 @@ import { useAuthStore } from "@/store/auth.store";
 export default function Navbar() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
-  const itemCount = useCartStore((state) => state.getItemCount());
+  const [mounted, setMounted] = useState(false);
+  const rawItemCount = useCartStore((state) => state.getItemCount());
   const { openCartDrawer, isMobileNavOpen, openMobileNav, closeMobileNav } =
     useUIStore();
   const { user, isAuthenticated } = useAuthStore();
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
     };
@@ -37,7 +39,9 @@ export default function Navbar() {
     { name: "LOCATIONS", href: "/contact" },
   ];
 
-  const isAdmin = user?.role === "admin" || user?.role === "manager";
+  const isAdmin = mounted && (user?.role === "admin" || user?.role === "manager");
+  const isAuth = mounted && isAuthenticated;
+  const itemCount = mounted ? rawItemCount : 0;
 
   return (
     <>
@@ -49,15 +53,15 @@ export default function Navbar() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <div className="w-10 h-10 rounded-xl bg-brand-red flex items-center justify-center text-brand-cream shadow-brand-glow group-hover:scale-105 transition-transform">
-              <Flame className="w-6 h-6 fill-current text-brand-cream animate-pulse" />
+          <Link href="/" className="flex items-center gap-2 sm:gap-2.5 group">
+            <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl bg-brand-red flex items-center justify-center text-brand-cream shadow-brand-glow group-hover:scale-105 transition-transform">
+              <Flame className="w-4 h-4 sm:w-6 sm:h-6 fill-current text-brand-cream animate-pulse" />
             </div>
             <div className="flex flex-col">
-              <span className="font-display font-black text-2xl tracking-tighter text-brand-cream leading-none group-hover:text-brand-red transition-colors">
+              <span className="font-display font-black text-lg sm:text-2xl tracking-tight text-brand-cream leading-none group-hover:text-brand-red transition-colors">
                 SMASH
               </span>
-              <span className="text-[10px] tracking-[0.25em] text-brand-yellow font-bold uppercase">
+              <span className="text-[8px] sm:text-[10px] tracking-[0.2em] sm:tracking-[0.25em] text-brand-yellow font-bold uppercase">
                 BURGER
               </span>
             </div>
@@ -97,8 +101,8 @@ export default function Navbar() {
             )}
 
             <Link
-              href={isAuthenticated ? "/account" : "/login"}
-              className="p-2.5 rounded-full bg-white/5 hover:bg-white/10 text-brand-cream/90 hover:text-brand-cream border border-white/10 transition-colors"
+              href={isAuth ? "/account" : "/login"}
+              className="hidden sm:flex p-2.5 rounded-full bg-white/5 hover:bg-white/10 text-brand-cream/90 hover:text-brand-cream border border-white/10 transition-colors"
               aria-label="Account Profile"
             >
               <UserIcon className="w-5 h-5" />
@@ -140,7 +144,7 @@ export default function Navbar() {
               <div className="w-8 h-8 rounded-lg bg-brand-red flex items-center justify-center text-brand-cream">
                 <Flame className="w-5 h-5 fill-current" />
               </div>
-              <span className="font-display font-black text-xl text-brand-cream">
+              <span className="font-display font-black text-base sm:text-lg text-brand-cream">
                 SMASH BURGER
               </span>
             </Link>
@@ -174,11 +178,11 @@ export default function Navbar() {
               </Link>
             )}
             <Link
-              href={isAuthenticated ? "/account" : "/login"}
+              href={isAuth ? "/account" : "/login"}
               onClick={closeMobileNav}
               className="font-display font-bold text-lg sm:text-xl text-brand-cream/80 hover:text-brand-cream transition-colors"
             >
-              {isAuthenticated ? "MY PROFILE & ORDERS" : "SIGN IN / REGISTER"}
+              {isAuth ? "MY PROFILE & ORDERS" : "SIGN IN / REGISTER"}
             </Link>
           </div>
 

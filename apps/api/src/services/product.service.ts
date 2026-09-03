@@ -16,6 +16,30 @@ export interface ProductQueryParams {
   limit?: number;
 }
 
+export const FALLBACK_ID_TO_SLUG: Record<string, string> = {
+  prod_1: 'the-og-double-smash',
+  prod_2: 'truffle-umami-melt',
+  prod_3: 'nashville-hot-firebird',
+  prod_4: 'smoky-bbq-bacon-beast',
+  prod_5: 'truffle-parmesan-fries',
+  prod_6: 'salted-caramel-bourbon-shake',
+  prod_7: 'smoked-pork-belly-bao',
+  prod_8: 'crispy-jalapeno-poppers',
+  prod_9: 'ghost-pepper-smash',
+  prod_10: 'madagascar-vanilla-shake',
+  prod_smash_1: 'the-og-double-smash',
+  prod_smash_2: 'truffle-umami-melt',
+  prod_smash_3: 'smoky-bbq-bacon-beast',
+  prod_chick_1: 'nashville-hot-firebird',
+  prod_chick_2: 'korean-crispy-chicken',
+  prod_veg_1: 'smoked-portobello-melt',
+  prod_veg_2: 'charred-paneer-smash',
+  prod_side_1: 'truffle-parmesan-fries',
+  prod_side_2: 'crispy-onion-rings',
+  prod_shake_1: 'salted-caramel-bourbon-shake',
+  prod_shake_2: 'madagascar-vanilla-shake',
+};
+
 export class ProductService {
   static async getAll(params: ProductQueryParams): Promise<{ products: IProduct[]; total: number; totalPages: number; page: number }> {
     const {
@@ -108,9 +132,18 @@ export class ProductService {
   }
 
   static async getById(id: string): Promise<IProduct> {
-    const product = await Product.findById(id).populate('category', 'name slug image');
+    const isMongoId = /^[0-9a-fA-F]{24}$/.test(id);
+    let product = null;
+
+    if (isMongoId) {
+      product = await Product.findById(id).populate('category', 'name slug image');
+    } else {
+      const slug = FALLBACK_ID_TO_SLUG[id] || id.toLowerCase();
+      product = await Product.findOne({ slug }).populate('category', 'name slug image');
+    }
+
     if (!product) {
-      throw new AppError('Product not found', 404, 'PRODUCT_NOT_FOUND');
+      throw new AppError(`Product '${id}' not found`, 404, 'PRODUCT_NOT_FOUND');
     }
     return product.toJSON() as IProduct;
   }
